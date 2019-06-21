@@ -45,7 +45,9 @@ nova_geracao = list
 for geracao in range(0, geracoes):
     for p in populacao:
         flag_geral = True
-        for pp in range(populacao.__sizeof__() - 1):
+        print(str(populacao.__sizeof__() - 1) + ' populacoes')
+        for pp in range(num_populacoes-1):
+            print(pp)
             flag = False
             for a in arestas:
                 if a.origem == populacao[pp] and a.destino == populacao[pp]:
