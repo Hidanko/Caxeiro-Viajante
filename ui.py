@@ -1,6 +1,10 @@
 import tkinter as tk
 
 class Application(tk.Frame):
+
+    def chamar_algoritmo_genetico(self):
+        print('a')
+
     def __init__(self, master):
         tk.Frame.__init__(self, master)
         self.grid()
@@ -16,6 +20,7 @@ class Application(tk.Frame):
         self.population = tk.Entry(self)
         self.population.grid(row = 1, column = 1)
         self.button1 = tk.Button(self, text="Submit")
+        self.button1.event_add(self.chamar_algoritmo_genetico())
         self.button1.grid()
 
 root = tk.Tk()
